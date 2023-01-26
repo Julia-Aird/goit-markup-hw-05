@@ -96,7 +96,20 @@ transition: color var(--transition);}
 .header-link:focus,
 .header-link:active { color: var(--accent-color);}
 
-.current {color: var(--accent-color)}
+.current {color: var(--accent-color);
+position: relative;}
+
+.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--hover-bgc);
+    border-radius: 2px;
+}
 
 /* Контакти */
 
